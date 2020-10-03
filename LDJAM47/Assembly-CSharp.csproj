@@ -56,9 +56,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\player_controller.cs" />
-    <Compile Include="Assets\Scripts\ductgun.cs" />
     <Compile Include="Assets\Scripts\killovertime.cs" />
+    <Compile Include="Assets\Scripts\ductgun.cs" />
     <Compile Include="Assets\Scripts\tape.cs" />
+    <Compile Include="Assets\Scripts\cam_follow.cs" />
+    <Compile Include="Assets\Scripts\rifter.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Images\images.txt" />

@@ -9,6 +9,7 @@ public class ductgun : MonoBehaviour
     public ParticleSystem fireparticle;
     public Transform firetip;
     public float thrust = 10f;
+    public float damage = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -28,9 +29,10 @@ public class ductgun : MonoBehaviour
             Instantiate(fireparticle, firetip.position, transform.rotation);
             GameObject rb = Instantiate(tape, firetip.position, transform.rotation);
             rb.GetComponent<Rigidbody2D>().AddForce(transform.up * thrust, ForceMode2D.Impulse);
-
+            rb.GetComponent<tape>().damage = damage;
             //recoil:
-
+            Rigidbody2D rbpar = GetComponentInParent<Rigidbody2D>();
+            rbpar.AddForce(-transform.up*3, ForceMode2D.Impulse);
         }
 
 
