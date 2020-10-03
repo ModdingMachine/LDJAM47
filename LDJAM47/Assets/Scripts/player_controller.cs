@@ -17,7 +17,8 @@ public class player_controller : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private bool IsGrounded() {
+    private bool IsGrounded()
+    {
         float extraHeight = 0.01f;
         Physics2D.Raycast(boxCollider2d.bounds.center, Vector2.down, boxCollider2d.bounds.extents.y + extraHeight);
     }
